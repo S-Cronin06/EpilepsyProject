@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Local Storage App</title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="jsfiles.js"></script>
+
+		<script >
+            var db;
+            document.getElementById('emailSave').addEventListener('click', saveData);
+            db = window.openDatabase("employees",  "1.0", "LearnToProgram", 200000);
+        </script>
+    </head>
+    <body>
+      <div data-role="page" id="Page3" data-add-back-btn="true">
+
+        <label for="name">Name</label>
+        <input type="text" id="name" />
+        <label for="email">Email</label>
+        <input type="text" id="email" />
+        <button id="emailSave" type="submit">Save</button>
+
+        <ul id="members" data-role="listview">
+        </ul>
+
+        <div data-role="footer" style="position:fixed; bottom:"> <a href="index.html"> Home</a></div>
+      </div>
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>

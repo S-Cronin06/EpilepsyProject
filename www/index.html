@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Epilepsy Detection App</title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="jsfiles.js"></script>
+        <script >
+        window.onload = function()
+        {
+            document.getElementById('btnSave').addEventListener('click',storeDatas);
+            document.getElementById('emailSave').addEventListener('click', saveData);
+
+            document.getElementById('habitSave').addEventListener('click',storeHabits);
+        }
+
+        </script>
+    </head>
+      <div data-role="page" id="Page1" >
+        <div data-role="header"><h1> Home Page</h1></div>
+
+        <div data-role="main" class="ui-content">
+            <p>Welcome! If you click on the link below, it will take you to Page Two.</p>
+            <a href="#pagetwo">Go to Page Two</a>
+
+            <form>
+                <a href="MyPassport.html"><ol> My Passport 
+                </ol>
+                </a>
+                <ol> My Medical Appointments</ol>
+                <a href="login.html"> <ol> My Medical Data</ol></a>
+                <a href ="signup.html"><ol> Signup</ol></a>
+            </form>
+           </div>
+        <div data-role="footer" style="position:fixed; bottom:"> <a href="signup.html"> Home</a></div>
+      </div>
+
+      <div data-role="page" id="pagetwo">
+        <script src="jsfiles.js"></script>
+        <div data-role="header" color="blue"><h1> Storage test</h1></div>
+        
+        <label for="username"> Username </label>
+        <input type="text" id="username" />
+        <label for="pwd"> Password </label>
+        <input type="password" id="pwd" />
+        <label for="surname">Surname *: </label>
+        <input type="text" id="surname" />
+    
+        <label for="other_names">Other Names *: </label>
+        <input type="text" id="names" />
+    
+        <label for="email">Email *: </label>
+        <input type="email" id="emails" />
+
+        <label for="tel">Telephone: </label>
+        <input type="text" id="tel" />
+        
+        <label for="address">Address *: </label>
+        <input type="text" id="address" />
+        
+        <label for="emergname">Emergency Contact Name *: </label>
+        <input type="text" id="emergname" />
+    
+        <label for="emergnum">Emergency Contact Number *: </label>
+        <input type="text" id="emergnum" />
+        
+        <button id='btnSave'> Submit </button>
+
+        <a href="/testfile.html">Test page</a>  <a href="sqltest.html"> SQL</a>  <a href="page3.html"> Page3</a>
+    </div>
+
+    <div data-role="page" id="pagethree">
+        <script src="jsfiles.js"></script>
+        <div data-role="header" color="blue"><h1> DBTest</h1></div>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" />
+        <label for="email">Email</label>
+        <input type="text" id="email" />
+        <button id="emailSave" type="submit">Save</button>
+
+        <ul id="members" data-role="listview">
+        </ul>
+
+        <div data-role="footer" style="position:fixed; bottom:"> <a href="#pagefour"> Home</a></div>
+
+    </div>
+
+    <div data-role="page" id="pagefour">
+        <script src="jsfiles.js"></script>
+        <div data-role="header" color="blue"><h1> Daily Form</h1></div>
+
+        <form>
+            <label for="date">Date Applicable</label>
+                <input type="date" id="date" />
+            <label for="sleep">How many hours sleep did you get?</label>
+                <input type="number" id="sleep" />
+            
+            <label for="nutrition">How would you rate your nutrition today out of 10(10 being excellent)?</label>
+                <input type="number" id="nutrition" />
+           
+            <label for="stress"> How stressed are you feeling today(1 being not stressed,10 being completely stressed)</label>
+                <input type="number" id="stress" />
+           
+            <label for="water"> How much water did you drink today in litres?</label>
+                <input type="number" id="water" />
+           
+            <label for="symptoms"> Any headaches,dizziness or pains?</label>
+                <input type="text" id="symptoms">
+            
+            <label for="exercise"> What exercise you did today? </label>
+                <input type="text" id="exercise">
+
+            <button id='habitSave'> Submit </button>
+
+        </form> 
+
+        <div data-role="footer" style="position:fixed; bottom:"> <a href="index.html"> Home</a></div>
+
+    </div>
+        
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "com.phonegap.helloworld",
+  "version": "1.0.0",
+  "displayName": "localStoragetest(2)",
+  "cordova": {
+    "platforms": [
+      "android",
+      "ios"
+    ],
+    "plugins": {
+      "cordova-sqlite-ext": {}
+    }
+  },
+  "dependencies": {
+    "cordova-android": "~6.3.0",
+    "cordova-sqlite-ext": "~0.10.2"
+  }
+}

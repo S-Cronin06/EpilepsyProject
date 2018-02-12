@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Local Storage App</title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="jsfiles.js"></script>
+
+		<script >
+			document.getElementById('habitSave').addEventListener('click',storeHabits);
+
+		</script>
+    </head>
+    <body>
+      <div data-role="page" id="Page2" data-add-back-btn="true">
+
+
+
+      	<form>
+      		<label for="date">Date Applicable</label>
+      			<input type="date" id="date" />
+            <label for="sleep">How many hours sleep did you get?</label>
+            	<input type="number" id="sleep" />
+            
+            <label for="nutrition">How would you rate your nutrition today out of 10(10 being excellent)?</label>
+            	<input type="number" id="nutrition" />
+           
+            <label for="stress"> How stressed are you feeling today(1 being not stressed,10 being completely stressed)</label>
+            	<input type="number" id="stress" />
+           
+            <label for="water"> How much water did you drink today in litres?</label>
+            	<input type="number" id="water" />
+           
+            <label for="symptoms"> Any headaches,dizziness or pains?</label>
+                <input type="text" id="symptoms">
+            
+            <label for="exercise"> What exercise you did today? </label>
+            	<input type="text" id="exercise">
+
+            <button id='habitSave'> Submit </button>
+
+        </form> 
+			 <a href="page3.html">Third Page</a> <a href="sqltest.html"> SQL</a> 
+      </div>
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>
